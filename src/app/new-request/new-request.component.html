@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="container main-content" [@fadeIn]>
+  <h2>To create a Request</h2>
+  <form [formGroup]="requestForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="vehicleOwnername">Vehicle Owner name:</label>
+      <input type="text" class="form-control" formControlName="vehicleOwnername"
+        placeholder="enter vehicle owner name"><br>
+    </div>
+    <div class="form-group">
+      <label for="vehicleModel">Vehicle Model:</label>
+      <input type="text" class="form-control" formControlName="vehicleModel" placeholder="enter vehicle Model"><br>
+    </div>
+    <label for="vehicleIssue">Vehicle Issue:</label><br>
+    <mat-form-field>
+      <mat-label>Select Issue</mat-label>
+      <mat-select formControlName="vehicleIssue">
+        <mat-option value="tier">Tier Problem</mat-option>
+        <mat-option value="fuel">Low Fuel</mat-option>
+        <mat-option value="towing">Towing Service</mat-option>
+        <mat-option value="engine">Engine Problem</mat-option>
+        <mat-option value="others">Others</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea class="form-control" rows="3" formControlName="description"
+        placeholder="Further details"></textarea><br>
+    </div>
+    <label for="SelectMechanic">Select Mechanic:</label><br>
+    <mat-form-field>
+      <mat-label>Select Mechanic</mat-label>
+      <mat-select formControlName="SelectMechanic">
+        <mat-option *ngFor="let mechanic of mechanics" [value]="mechanic.id">{{ mechanic.garageName }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" class="form-control" formControlName="location" placeholder="enter current location"><br>
+    </div><br>
+    <button type="submit" class="btn btn-primary" [disabled]="!requestForm.valid">Submit Request</button>
+  </form>
+</div>

@@ -1,0 +1,80 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url('/assets/2.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+  
+  
+  .login-box {
+    width: 350px;
+    padding: 20px;
+    background-color: #122537;
+    border: 1px solid #122537;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .login-form input,
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+  }
+  
+  .login-form button {
+    background-color: #3897f0;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #357ae8;
+  }
+  .password-input button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none; /* Add this rule to remove the focus outline */
+  }
+  .password-input {
+    position: relative;
+  }
+  
+  .password-input input {
+    padding-right: 30px;
+  }
+  
+  .password-input button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .password-input button i {
+    font-size: 16px;
+    color: #555;
+  }
+  .invalid {
+    border: 1px solid red;
+  }

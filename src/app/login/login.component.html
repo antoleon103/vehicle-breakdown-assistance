@@ -1,0 +1,60 @@
+<div class="login-container">
+  <div class="login-box">
+    <img src="../assets/logo.png" alt="loading" class="logo" />
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div>
+        <input
+          type="email"
+          placeholder="Email"
+          name="username"
+          required
+          id="username"
+          formControlName="username"
+        />
+        <div
+          *ngIf="
+            formControls['username']?.invalid &&
+            (formControls['username']?.dirty ||
+              formControls['username']?.touched)
+          "
+        >
+          <div *ngIf="formControls['username'].errors?.['required']">
+            <P style="color: red;">Email is required</P>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          formControlName="password"
+        />
+        <div
+          *ngIf="
+            formControls['password'].invalid &&
+            (formControls['password'].dirty || formControls['password'].touched)
+          "
+        >
+          <div *ngIf="formControls['password'].errors?.['required']">
+            <P style="color: red;">Password is required</P>
+          </div>
+          <div *ngIf="formControls['password'].errors?.['minlength']">
+            Password must be at least 6 characters long
+          </div>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Log In</button>
+    </form>
+    <div class="create-account">
+      <span style="color: aliceblue;">Not a member?</span>
+      <a href="/signup">Create an account</a>
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+

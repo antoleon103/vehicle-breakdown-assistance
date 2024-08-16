@@ -1,0 +1,61 @@
+<app-mechanicheader></app-mechanicheader>
+
+
+<div class="main-content" [@fadeIn]>
+<table mat-table [dataSource]="dataSource">
+    
+    <ng-container matColumnDef="ownername">
+      <th mat-header-cell *matHeaderCellDef>ownername</th>
+      <td mat-cell *matCellDef="let user">{{user.Vehicle_Owner_name}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="vehicleModel">
+      <th mat-header-cell *matHeaderCellDef>vehicleModel</th>
+      <td mat-cell *matCellDef="let user">{{user.Vehicle_Model}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="vehicleIssue">
+        <th mat-header-cell *matHeaderCellDef>vehicleIssue</th>
+        <td mat-cell *matCellDef="let user">{{user.Vehicle_Issue}}</td>
+      </ng-container>
+    
+    <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>description</th>
+        <td mat-cell *matCellDef="let user">{{user.Description}}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="Location">
+        <th mat-header-cell *matHeaderCellDef>Location</th>
+        <td mat-cell *matCellDef="let user">{{user.Location}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let user">
+          <!-- Show the "Accept" button only if the status is not 'Rejected' -->
+          <button *ngIf="user.status !== 'Rejected'" class="btn btn-success" (click)="acceptRequest(user.id)" style="margin-right: 8px;">Accept</button>
+          
+          <!-- Show the "Reject" button only if the status is not 'Accepted' -->
+          <button *ngIf="user.status !== 'Accepted'" class="btn btn-danger" (click)="rejectRequest(user.id)">Reject</button>
+        </td>
+      </ng-container>
+      
+
+      <ng-container matColumnDef="openMap">
+        <th mat-header-cell *matHeaderCellDef>Open Map</th>
+        <td mat-cell *matCellDef="let user">
+            <button class="btn btn-primary" (click)="openConfirmationDialog(user)">Do Service</button>
+        </td>
+    </ng-container>
+    
+      
+      <ng-container matColumnDef="SelectMechanic">
+        <th mat-header-cell *matHeaderCellDef>SelectMechanic</th>
+        <td mat-cell *matCellDef="let user">{{user.SelectMechanic}}</td>
+      </ng-container>
+      
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+  

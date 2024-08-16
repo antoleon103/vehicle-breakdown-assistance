@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="container main-content">
+    <h2>Feedback</h2>
+    <form (ngSubmit)="submitFeedback()">
+        <div class="form-group">
+            <label for="feedback">Provide your feedback:</label>
+            <textarea class="form-control" id="feedback" [(ngModel)]="feedback" name="feedback" rows="4"
+                placeholder="Enter your feedback" required></textarea>
+        </div><br>
+        <div class="form-group">
+            <label for="rating">Rate your experience:</label><br><br>
+            <div class="star-rating">
+                <span class="star" *ngFor="let star of [1, 2, 3, 4, 5]" (click)="userRating = star">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path [attr.fill]="star <= userRating ? 'gold' : 'none'"
+                            d="M12 2.5l3.09 6.787L22 9.75l-5.255 5.1 1.236 6.963L12 18.25l-5.98 3.563 1.236-6.963L2 9.75l6.91.537z" />
+                    </svg>
+                </span>
+            </div><br>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" [disabled]="!feedback || !userRating">Submit Feedback</button>
+    </form>
+</div>

@@ -1,0 +1,101 @@
+.main-content {
+    display: flex; /* Use flexbox to display items side by side */
+    justify-content: space-between; /* Add space between the items */
+    align-items: center; /* Center items vertically */
+}
+
+.contact-layouts {
+    display: flex; /* Use flexbox for the container */
+    flex-grow: 1; /* Allow the container to grow */
+}
+
+.contact-layouts > * {
+    flex-basis: 48%; /* Set the width of each layout */
+    margin: 0 1%; /* Add some margin between the layouts */
+}
+
+.contact-layouts > :first-child {
+    margin-left: 0; /* Remove left margin for the first layout */
+}
+
+.contact-layouts > :last-child {
+    margin-right: 0; /* Remove right margin for the last layout */
+}
+
+.contact-form-layout,
+.contact-details-layout {
+    border: 1px solid #ccc; /* Add border for each layout */
+    padding: 30px; /* Add padding to each layout */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+}
+
+.contact-form-layout form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-layout .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-layout .form-group label {
+    margin-bottom: 5px;
+}
+
+.contact-form-layout .form-group input,
+.contact-form-layout .form-group textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form-layout .form-group input {
+    margin-bottom: 10px; /* Add bottom margin to input fields */
+}
+.custom-button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    padding: 6px 12px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add border radius */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+  /* styles.css */
+.contact-container {
+    max-width: 600px; /* Set maximum width for larger screens */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .contact-container {
+      max-width: 100%; /* Set maximum width to 100% for smaller screens */
+    }
+  }/* styles.css */
+.social-icons {
+    display: inline-block; /* Ensure icons are displayed in a row */
+  }
+  
+  .social-icons a {
+    margin-right: 10px; /* Add right margin to create space between icons */
+  }
+  /* styles.css */
+
+.layout-container {
+    background-image: url('/assets/8.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image */
+    /* Add any other background properties as needed */
+  }
+  
+  

@@ -1,0 +1,32 @@
+.main-content {
+    background-image: url('/assets/8.jpg');
+    opacity: 0.85;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensures the background covers the entire viewport */
+    padding: 20px; /* Add padding as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Additional styles for your cards */
+  .card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    // color:aliceblue;
+    opacity: 2;
+  }
+  
+  .card-content {
+    color: white;
+  }
+  
+  .card-footer {
+    text-align: right;
+    color: rgba(53, 0, 241, 0.6);
+  }
+  

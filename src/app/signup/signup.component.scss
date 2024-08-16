@@ -1,0 +1,98 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/assets/2.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+  
+  .signup-box {
+    width: 350px;
+    padding: 20px;
+    background-color:#122537;
+    border: 1px solid #122537;
+    border-radius: 5px;
+    text-align: center;
+    opacity:10px;
+  }
+  
+  .signup-box h2 {
+    margin-bottom: 20px;
+  }
+  
+  .signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+  }
+  
+  .signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3897f0;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .signup-form button:hover {
+    background-color: #357ae8;
+  }
+  
+  .login-link {
+    margin-top: 20px;
+  }
+  
+  .radio-label {
+    width: 100px; /* Adjust the margin as needed to position the radio buttons */
+  }
+  /* Additional styling for radio buttons */
+.form-group {
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  
+  .radio-label {
+    margin-right: 10px; 
+    width: 120px;
+    /* Adjust the margin as needed to create space between the label and radio button */
+  }
+  label {
+    margin-right: 10px;
+  }
+  .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-buttons {
+  display: flex;
+  color:#fff;
+}
+
+.radio-label {
+  text-align: left  ; /* Adjust as needed */
+}
+    
+.radio-buttons label:last-child {
+  margin-top: 10px; /* Adjust to move the Mechanic button lower */
+}
+
+  .radio-buttons label {
+    margin-right: 20px; /* Adjust spacing between buttons */
+  }.form-group {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the flex container */
+  }
+  
+  .radio-buttons label {
+    margin-right: 20px; /* Adjust spacing between buttons */
+  }
+ 
+  

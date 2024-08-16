@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="main-content">
+    <section class="about-section">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Welcome to Vehicle Breakdown Assistance, your trusted companion on the road. We are dedicated to
+                providing reliable assistance to drivers in need, ensuring you get back on the road safely and quickly.
+            </p>
+            <p>Our team consists of experienced professionals passionate about helping others. With our expertise and
+                commitment to service excellence, we strive to make your journey smoother and stress-free.</p>
+        </div>
+        <div class="about-image">
+            <!-- Add background image here -->
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2>Our Team</h2>
+        <div class="team-members">
+            <div class="team-member" *ngFor="let member of team">
+                <div class="member-avatar">
+                    <!-- Add team member avatar -->
+                </div>
+                <div class="member-details">
+                    <h3>{{ member.name }}</h3>
+                    <p>{{ member.position }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
